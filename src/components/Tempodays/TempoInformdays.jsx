@@ -12,7 +12,7 @@ function TempoInform3day({ tempoDays }) {
     }
   }
 
-  const nextdays = Object.values(dailyForecast).slice(0, 3);
+  const nextdays = Object.values(dailyForecast).slice(1, 6);
 
   function convertDate(date) {
     const newDate = new Date(date.dt * 1000).toLocaleDateString("pt-BR", {
@@ -24,7 +24,7 @@ function TempoInform3day({ tempoDays }) {
 
   return (
     <div className="tempo-container">
-      <h3>Proximos 3 Dias</h3>
+      <h3>Proximos Dias</h3>
       <div className="tempo-list">
         {nextdays.map((forecast) => (
           <div key={forecast.dt} className="tempo-item">
@@ -34,8 +34,7 @@ function TempoInform3day({ tempoDays }) {
             />
             <p className="fordescription">{forecast.weather[0].description}</p>
             <p>
-              {Math.round(forecast.main.temp_min)} ºC min /
-              {Math.round(forecast.main.temp_max)} ºC máx
+              {Math.round(forecast.main.temp)} ºC
             </p>
           </div>
         ))}

@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useRef, useState } from "react";
 import TempoInform from "./components/TempoInform/TempoInform.jsx";
-import TempoInform3day from "./components/Tempo3days/TempoInform3day.jsx";
+import TempoInform3day from "./components/Tempodays/TempoInformdays.jsx";
 import axios from "axios";
 
 // API usada no projeto : https://openweathermap.org/
