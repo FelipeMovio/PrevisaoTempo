@@ -11,6 +11,7 @@ function TempoInform3day({ tempoDays }) {
       dailyForecast[date] = forecast;
     }
   }
+  console.log(dailyForecast);
 
   const nextdays = Object.values(dailyForecast).slice(1, 6);
 
@@ -33,9 +34,7 @@ function TempoInform3day({ tempoDays }) {
               src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`}
             />
             <p className="fordescription">{forecast.weather[0].description}</p>
-            <p>
-              {Math.round(forecast.main.temp)} ºC
-            </p>
+            <p>{Math.round(forecast.main.temp)} ºC</p>
           </div>
         ))}
       </div>
